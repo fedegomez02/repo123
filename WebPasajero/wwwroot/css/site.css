@@ -1,0 +1,53 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-basis: 100%;
+    color: white;
+}
+
+header {
+    width: 80%;
+    background-color: yellow;
+    padding: 20px;
+
+}
+
+section {
+    width: 20%;
+    background-color: darkslateblue;
+    padding: 20px;
+}
+
+#content {
+    background-color: greenyellow;
+    padding: 50px;
+}
+
+nav {
+    width: 20%;
+    background-color: yellow;
+    padding: 50px;
+    display: flex;
+    
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+footer {
+    width: 100%;
+    background-color: black;
+
+}

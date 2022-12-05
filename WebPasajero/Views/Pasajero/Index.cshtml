@@ -1,0 +1,31 @@
+﻿@model IEnumerable<WebPasajero.Models.Pasajero>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<p>@Html.ActionLink("Nuevo Pasajero", "Create", "Pasajero")</p>
+<table>
+    <tr>
+        <th>@Html.DisplayNameFor(m => m.Id)</th>
+        <th>@Html.DisplayNameFor(m => m.Nombre)</th>
+        <th>@Html.DisplayNameFor(m => m.Apellido)</th>
+        <th>@Html.DisplayNameFor(m => m.FechaNacimiento)</th>
+        <th>@Html.DisplayNameFor(m => m.Ciudad)</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(m => item.Id)</td>
+            <td>@Html.DisplayFor(m => item.Nombre)</td>
+            <td>@Html.DisplayFor(m => item.Apellido)</td>
+            <td>@Html.DisplayFor(m => item.FechaNacimiento)</td>
+            <td>@Html.DisplayFor(m => item.Ciudad)</td>
+
+            <td>@Html.ActionLink("Detalle", "Detalle", new { id = item.Id })</td>
+            <td>@Html.ActionLink("Eliminar", "Delete", new { id = item.Id })</td>
+        </tr>
+    }
+
+</table>
